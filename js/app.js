@@ -1,3 +1,4 @@
+var desktopHeader = $("#desktop_header");
 $(document).ready(function() {
     //lazy loading
     if ($("img.lazy").length > 0) {
@@ -9,6 +10,29 @@ $(document).ready(function() {
     $("i.convert-svg").each(function() {
         var $img = $(this);
         convertSvgToIcon($img);
+    });
+
+    // desktop header
+    desktopHeader.find(".header-item.dropdown .link").on("click", function(e) {
+        $this = $(this);
+        $this.closest(".header-item").toggleClass("active");
+        $this.closest(".header-item").find(".dropdown-menu-container").toggleClass("show");
+        desktopHeader.find(".dropdown-menu-container").not($this.closest(".header-item").find(".dropdown-menu-container")).removeClass("show");
+        desktopHeader.find(".header-item.dropdown").not($this.closest(".header-item")).removeClass("active");
+    });
+
+    $(document).on("click", function(e) {
+        if (
+            $(e.target).is("#messages_box, #messages_box *") ||
+            $(e.target).is("header .dropdown-menu-container, header .dropdown-menu-container *") ||
+            $(e.target).is("header .header-item.dropdown, header .header-item.dropdown *")
+        ) {
+            return;
+        }
+
+        console.log($(e.target));
+        desktopHeader.find(".dropdown-menu-container").removeClass("show");
+        desktopHeader.find(".header-item.dropdown").removeClass("active");
     });
 });
 
