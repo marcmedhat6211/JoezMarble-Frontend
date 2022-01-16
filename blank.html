@@ -201,15 +201,138 @@
             <!-- end header links -->
             <!-- icons -->
             <div class="icons-container">
-                <button type="button" class="btn" id="desktop_search_btn">
+                <button type="button" class="btn icon-btn" id="desktop_search_btn">
                     <i class="convert-svg" data-src="images/icons/magnifying-glass.svg"></i>
                 </button>
-                <button type="button" class="btn" id="desktop_favorite_btn">
+                <button type="button" class="btn icon-btn" id="desktop_favorite_btn">
                     <i class="convert-svg" data-src="images/icons/cart.svg"></i>
                 </button>
-                <button type="button" class="btn" id="desktop_cart_btn">
-                    <i class="convert-svg" data-src="images/icons/cart.svg"></i>
-                </button>
+                <div class="cart-main-container">
+                    <button type="button" class="btn icon-btn" id="desktop_cart_btn">
+                        <i class="convert-svg" data-src="images/icons/cart.svg"></i>
+                    </button>
+                    <form action="#" id="website_cart" class="website-cart d-none">
+                        <div class="title-container">
+                            <h3 class="cart-title">Your Cart</h3>
+                        </div>
+                        <!-- cart items -->
+                        <div class="items-container">
+                            <!-- cart item -->
+                            <div class="cart-item-container">
+                                <button type="button" class="btn remove-item-btn">
+                                    <i class="convert-svg" data-src="images/icons/x.svg"></i>
+                                </button>
+                                <div class="item-img-container">
+                                    <img class="lazy" data-src="https://via.placeholder.com/100x100" alt="">
+                                </div>
+                                <div class="item-details">
+                                    <h2 class="item-title">Coaster</h2>
+                                    <p class="item-description">Lorem Ipsum</p>
+                                    <div class="pricing-container">
+                                        <div class="input-group incrementor incrementor-style-1">
+                                            <button type="button" class="btn minus">
+                                                <i class="convert-svg" data-src="images/icons/minus.svg"></i>
+                                            </button>
+                                            <input type="number" id="items_number" value="1" name="qty">
+                                            <button type="button" class="btn plus">
+                                                <i class="convert-svg" data-src="images/icons/plus.svg"></i>
+                                            </button>
+                                        </div>
+                                        <p class="item-price">250.00 EGP</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end cart item -->
+                            <!-- cart item -->
+                            <div class="cart-item-container">
+                                <button type="button" class="btn remove-item-btn">
+                                    <i class="convert-svg" data-src="images/icons/x.svg"></i>
+                                </button>
+                                <div class="item-img-container">
+                                    <img class="lazy" data-src="https://via.placeholder.com/100x100" alt="">
+                                </div>
+                                <div class="item-details">
+                                    <h2 class="item-title">Coaster</h2>
+                                    <p class="item-description">Lorem Ipsum</p>
+                                    <div class="pricing-container">
+                                        <div class="input-group incrementor incrementor-style-1">
+                                            <button type="button" class="btn minus">
+                                                <i class="convert-svg" data-src="images/icons/minus.svg"></i>
+                                            </button>
+                                            <input type="number" id="items_number" value="1" name="qty">
+                                            <button type="button" class="btn plus">
+                                                <i class="convert-svg" data-src="images/icons/plus.svg"></i>
+                                            </button>
+                                        </div>
+                                        <p class="item-price">250.00 EGP</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end cart item -->
+                            <!-- cart item -->
+                            <div class="cart-item-container">
+                                <button type="button" class="btn remove-item-btn">
+                                    <i class="convert-svg" data-src="images/icons/x.svg"></i>
+                                </button>
+                                <div class="item-img-container">
+                                    <img class="lazy" data-src="https://via.placeholder.com/100x100" alt="">
+                                </div>
+                                <div class="item-details">
+                                    <h2 class="item-title">Coaster</h2>
+                                    <p class="item-description">Lorem Ipsum</p>
+                                    <div class="pricing-container">
+                                        <div class="input-group incrementor incrementor-style-1">
+                                            <button type="button" class="btn minus">
+                                                <i class="convert-svg" data-src="images/icons/minus.svg"></i>
+                                            </button>
+                                            <input type="number" id="items_number" value="1" name="qty">
+                                            <button type="button" class="btn plus">
+                                                <i class="convert-svg" data-src="images/icons/plus.svg"></i>
+                                            </button>
+                                        </div>
+                                        <p class="item-price">250.00 EGP</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end cart item -->
+                            <!-- cart item -->
+                            <div class="cart-item-container">
+                                <button type="button" class="btn remove-item-btn">
+                                    <i class="convert-svg" data-src="images/icons/x.svg"></i>
+                                </button>
+                                <div class="item-img-container">
+                                    <img class="lazy" data-src="https://via.placeholder.com/100x100" alt="">
+                                </div>
+                                <div class="item-details">
+                                    <h2 class="item-title">Coaster</h2>
+                                    <p class="item-description">Lorem Ipsum</p>
+                                    <div class="pricing-container">
+                                        <div class="input-group incrementor incrementor-style-1">
+                                            <button type="button" class="btn minus">
+                                                <i class="convert-svg" data-src="images/icons/minus.svg"></i>
+                                            </button>
+                                            <input type="number" id="items_number" value="1" name="qty">
+                                            <button type="button" class="btn plus">
+                                                <i class="convert-svg" data-src="images/icons/plus.svg"></i>
+                                            </button>
+                                        </div>
+                                        <p class="item-price">250.00 EGP</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end cart item -->
+                        </div>
+                        <!-- end cart items -->
+                        <div class="cart-total-container">
+                            <p class="text mb-0">TOTAL</p>
+                            <p class="amount mb-0">750.00 EGP</p>
+                        </div>
+                        <button type="button" id="close_cart_btn" class="btn close-cart-btn">
+                            <i class="convert-svg" data-src="images/icons/x.svg"></i>
+                        </button>
+                        <button type="submit" class="btn btn-style-1 w-100">CHECK OUT</button>
+                    </form>
+                </div>
             </div>
             <!-- end icons -->
             <!-- profile section -->
@@ -217,7 +340,51 @@
                 <button type="button" id="desktop_profile_btn" class="btn profile-btn">
                     <img class="lazy" data-src="images/profile-placeholder.jpg" alt="">
                 </button>
-                <div id="desktop_profile_dropdown"></div>
+                <div id="desktop_profile_dropdown" class="d-none">
+                    <ul class="links-container">
+                        <!-- link -->
+                        <li class="link-container">
+                            <div class="icon-container">
+                                <i class="convert-svg" data-src="images/icons/user.svg"></i>
+                            </div>
+                            <div class="link-text-container">
+                                <span class="link-text">Joe Roman</span>
+                                <a class="edit-profile-link" href="edit-profile.html">Edit your profile</a>
+                            </div>
+                        </li>
+                        <!-- end link -->
+                        <!-- link -->
+                        <li class="link-container">
+                            <div class="icon-container">
+                                <i class="convert-svg" data-src="images/icons/shopping-bag.svg"></i>
+                            </div>
+                            <div class="link-text-container">
+                                <a class="link-text" href="orders-history.html">My orders</a>
+                            </div>
+                        </li>
+                        <!-- end link -->
+                        <!-- link -->
+                        <li class="link-container">
+                            <div class="icon-container">
+                                <i class="convert-svg" data-src="images/icons/currency-gbp-bold.svg"></i>
+                            </div>
+                            <div class="link-text-container">
+                                <a class="link-text" href="#">Currency</a>
+                            </div>
+                        </li>
+                        <!-- end link -->
+                        <!-- link -->
+                        <li class="link-container">
+                            <div class="icon-container">
+                                <i class="convert-svg" data-src="images/icons/log-out.svg"></i>
+                            </div>
+                            <div class="link-text-container">
+                                <a class="link-text" href="#">Log out</a>
+                            </div>
+                        </li>
+                        <!-- end link -->
+                    </ul>
+                </div>
             </div>
             <!-- end profile section -->
         </div>
