@@ -1,4 +1,5 @@
 var desktopHeader = $("#desktop_header");
+var searchPopup = $("#search_popup");
 $(document).ready(function() {
     //lazy loading
     if ($("img.lazy").length > 0) {
@@ -39,6 +40,16 @@ $(document).ready(function() {
 
     $("#close_cart_btn").on("click", function() {
         desktopHeader.find("#website_cart").addClass("d-none");
+    });
+
+    //search popup
+    desktopHeader.find("#desktop_search_btn").on("click", function() {
+        searchPopup.addClass("show");
+        $("body").addClass("modal-open");
+    });
+    searchPopup.find(".close-search-btn").on("click", function() {
+        searchPopup.removeClass("show");
+        $("body").removeClass("modal-open");
     });
 
     $(document).on("click", function(e) {

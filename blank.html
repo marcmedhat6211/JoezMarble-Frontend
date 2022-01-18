@@ -369,7 +369,7 @@
                                 <i class="convert-svg" data-src="images/icons/currency-gbp-bold.svg"></i>
                             </div>
                             <div class="link-text-container">
-                                <a class="link-text" href="#">Currency</a>
+                                <a class="link-text" href="#" data-toggle="modal" data-target="#currencyModal">Currency</a>
                             </div>
                         </li>
                         <!-- end link -->
@@ -398,7 +398,110 @@
         <!--END BODY-->
     </main>
 
+    <!-- SEARCH POPUP -->
+    <div id="search_popup">
+        <button type="button" class="btn close-search-btn">
+            <i class="convert-svg" data-src="images/icons/x.svg"></i>
+        </button>
+        <form action="#" id="search_form">
+            <div class="input-container">
+                <input class="form-control" type="text" placeholder="Search..">
+                <i class="convert-svg" data-src="images/icons/magnifying-glass.svg"></i>
+            </div>
+        </form>
+        <p class="search-results-text no-results-text d-none">No Resuls Found</p>
+        <p class="search-results-text">Results for <span id="search_keyword">“Bathroom”</span></p>
+        <div class="search-results">
+            <!-- group -->
+            <div class="search-result-group">
+                <h6 class="group-title">Products</h6>
+                <!-- item -->
+                <div class="group-item">
+                    <a href="product-details.html" class="img-container">
+                        <img class="lazy" data-src="https://via.placeholder.com/97x97" alt="">
+                    </a>
+                    <div class="item-text-container">
+                        <a href="filter.html" class="item-category">Soap Plates</a>
+                        <a href="product-details.html" class="item-title mb-0">Lorem Ipsum</a>
+                    </div>
+                </div>
+                <!-- end item -->
+                <!-- item -->
+                <div class="group-item">
+                    <a href="product-details.html" class="img-container">
+                        <img class="lazy" data-src="https://via.placeholder.com/97x97" alt="">
+                    </a>
+                    <div class="item-text-container">
+                        <a href="filter.html" class="item-category">Bathroom Sets</a>
+                        <a href="product-details.html" class="item-title mb-0">Lorem Ipsum</a>
+                    </div>
+                </div>
+                <!-- end item -->
+            </div>
+            <!-- end group -->
+            <!-- group -->
+            <div class="search-result-group">
+                <h6 class="group-title">Living</h6>
+                <!-- item -->
+                <div class="group-item">
+                    <a href="product-details.html" class="img-container">
+                        <img class="lazy" data-src="https://via.placeholder.com/97x97" alt="">
+                    </a>
+                    <div class="item-text-container">
+                        <a href="filter.html" class="item-category">Sinks</a>
+                        <a href="product-details.html" class="item-title mb-0">Lorem Ipsum</a>
+                    </div>
+                </div>
+                <!-- end item -->
+                <!-- item -->
+                <div class="group-item">
+                    <a href="product-details.html" class="img-container">
+                        <img class="lazy" data-src="https://via.placeholder.com/97x97" alt="">
+                    </a>
+                    <div class="item-text-container">
+                        <a href="filter.html" class="item-category">Engravers</a>
+                        <a href="product-details.html" class="item-title mb-0">Lorem Ipsum</a>
+                    </div>
+                </div>
+                <!-- end item -->
+            </div>
+            <!-- end group -->
+        </div>
+    </div>
+    <!-- END SEARCH POPUP -->
 
+    <!-- CURRENCY MODAL -->
+    <!-- Button trigger modal -->
+    <div class="modal fade modal-style-1" id="currencyModal" tabindex="-1" role="dialog" aria-labelledby="currencyModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="btn close-modal-btn" data-dismiss="modal">
+                        <i class="convert-svg" data-src="images/icons/x.svg"></i>
+                    </button>
+                    <p class="modal-text">Current Currency</p>
+                    <div class="currenct-currency-container">
+                        <p class="current-currency mb-0">Egyptian Pound</p>
+                    </div>
+                    <form action="#" id="currency_form">
+                        <p class="modal-text text-center">Choose Currency</p>
+                        <div class="input-container">
+                            <select class="form-control" id="exampleFormControlSelect1">
+                                <option value="egp">Egyptian Pound</option>
+                                <option value="usd">US Dollars</option>
+                                <option value="cad">Canadian Dollars</option>
+                            </select>
+                            <i class="convert-svg" data-src="images/icons/caret-down.svg"></i>
+                        </div>
+                        <div class="submit-btn-container d-flex justify-content-center">
+                            <button type="submit" class="btn btn-style-1 w-50">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END CURRENCY MODAL -->
 
     <!--FOOTER-->
     <footer>
