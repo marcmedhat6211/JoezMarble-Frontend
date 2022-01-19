@@ -10673,7 +10673,7 @@ body {
   text-align: left;
   font-size: 14px;
   position: relative;
-  overflow-x: hidden;
+  z-index: 10;
 }
 
 button:focus,
@@ -11042,7 +11042,11 @@ header #desktop_header .profile-section #desktop_profile_dropdown .links-contain
   font-weight: 300;
   color: #A7A5B0;
 }
-
+header #mobile_header {
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+}
 #search_popup {
   position: absolute;
   top: 0;
@@ -11056,10 +11060,12 @@ header #desktop_header .profile-section #desktop_profile_dropdown .links-contain
   -ms-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  right: -100%;
+  opacity: 0;
+  visibility: hidden;
 }
 #search_popup.show {
-  right: 0;
+  opacity: 1;
+  visibility: visible;
 }
 #search_popup .close-search-btn {
   width: 18px;

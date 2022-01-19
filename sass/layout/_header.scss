@@ -357,4 +357,20 @@ header {
             }
         }
     }
+    #mobile_header {
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px 24px;
+        #mobile_menu_btn {
+            svg {}
+        }
+        .mobile-logo {
+            img {}
+        }
+        .mobile-icons-container {
+            .mobile-icon-btn {
+                svg {}
+            }
+        }
+    }
 }

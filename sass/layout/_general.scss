@@ -5,7 +5,7 @@ body {
     text-align: $start-direction;
     font-size: 14px;
     position: relative;
-    overflow-x: hidden;
+    z-index: 10;
 }
 
 button,

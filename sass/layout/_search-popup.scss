@@ -7,9 +7,11 @@
     background: $color-black;
     padding: 24px;
     @include transition(all .3s ease-in-out);
-    #{$end-direction}: -100%;
+    opacity: 0;
+    visibility: hidden;
     &.show {
-        #{$end-direction}: 0;
+        opacity: 1;
+        visibility: visible;
     }
     .close-search-btn {
         width: 18px;
