@@ -53,3 +53,22 @@
         }
     }
 }
+
+@include media-breakpoint-md {
+    .incrementor-style-1 {
+        width: 100px;
+        padding-#{$end-direction}: 6px;
+        padding-#{$start-direction}: 6px;
+        button {
+            padding: 0;
+            &:not(:last-child) {
+                margin-right: 20px;
+            }
+            width: 14px;
+            height: 14px;
+        }
+        #items_number {
+            transform: translateX(-10%);
+        }
+    }
+}
