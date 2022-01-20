@@ -536,78 +536,6 @@
         <!--END BODY-->
     </main>
 
-    <!-- SEARCH POPUP -->
-    <div id="search_popup">
-        <button type="button" class="btn close-search-btn">
-            <i class="convert-svg" data-src="images/icons/x.svg"></i>
-        </button>
-        <form action="#" id="search_form">
-            <div class="input-container">
-                <input class="form-control" type="text" placeholder="Search..">
-                <i class="convert-svg" data-src="images/icons/magnifying-glass.svg"></i>
-            </div>
-        </form>
-        <p class="search-results-text no-results-text d-none">No Resuls Found</p>
-        <p class="search-results-text">Results for <span id="search_keyword">“Bathroom”</span></p>
-        <div class="search-results">
-            <!-- group -->
-            <div class="search-result-group">
-                <h6 class="group-title">Products</h6>
-                <!-- item -->
-                <div class="group-item">
-                    <a href="product-details.html" class="img-container">
-                        <img class="lazy" data-src="https://via.placeholder.com/97x97" alt="">
-                    </a>
-                    <div class="item-text-container">
-                        <a href="filter.html" class="item-category">Soap Plates</a>
-                        <a href="product-details.html" class="item-title mb-0">Lorem Ipsum</a>
-                    </div>
-                </div>
-                <!-- end item -->
-                <!-- item -->
-                <div class="group-item">
-                    <a href="product-details.html" class="img-container">
-                        <img class="lazy" data-src="https://via.placeholder.com/97x97" alt="">
-                    </a>
-                    <div class="item-text-container">
-                        <a href="filter.html" class="item-category">Bathroom Sets</a>
-                        <a href="product-details.html" class="item-title mb-0">Lorem Ipsum</a>
-                    </div>
-                </div>
-                <!-- end item -->
-            </div>
-            <!-- end group -->
-            <!-- group -->
-            <div class="search-result-group">
-                <h6 class="group-title">Living</h6>
-                <!-- item -->
-                <div class="group-item">
-                    <a href="product-details.html" class="img-container">
-                        <img class="lazy" data-src="https://via.placeholder.com/97x97" alt="">
-                    </a>
-                    <div class="item-text-container">
-                        <a href="filter.html" class="item-category">Sinks</a>
-                        <a href="product-details.html" class="item-title mb-0">Lorem Ipsum</a>
-                    </div>
-                </div>
-                <!-- end item -->
-                <!-- item -->
-                <div class="group-item">
-                    <a href="product-details.html" class="img-container">
-                        <img class="lazy" data-src="https://via.placeholder.com/97x97" alt="">
-                    </a>
-                    <div class="item-text-container">
-                        <a href="filter.html" class="item-category">Engravers</a>
-                        <a href="product-details.html" class="item-title mb-0">Lorem Ipsum</a>
-                    </div>
-                </div>
-                <!-- end item -->
-            </div>
-            <!-- end group -->
-        </div>
-    </div>
-    <!-- END SEARCH POPUP -->
-
     <!-- MOBILE MENU -->
     <div id="mobile_menu_wrapper">
         <div id="mobile_menu">
@@ -707,41 +635,9 @@
     </div>
     <!-- END MOBILE MENU -->
 
-    <!-- CURRENCY MODAL -->
-    <div class="modal fade modal-style-1" id="currencyModal" tabindex="-1" role="dialog" aria-labelledby="currencyModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <button type="button" class="btn close-modal-btn" data-dismiss="modal">
-                        <i class="convert-svg" data-src="images/icons/x.svg"></i>
-                    </button>
-                    <p class="modal-text">Current Currency</p>
-                    <div class="currenct-currency-container">
-                        <p class="current-currency mb-0">Egyptian Pound</p>
-                    </div>
-                    <form action="#" id="currency_form">
-                        <p class="modal-text text-center">Choose Currency</p>
-                        <div class="input-container">
-                            <select class="form-control" id="exampleFormControlSelect1">
-                                <option value="egp">Egyptian Pound</option>
-                                <option value="usd">US Dollars</option>
-                                <option value="cad">Canadian Dollars</option>
-                            </select>
-                            <i class="convert-svg" data-src="images/icons/caret-down.svg"></i>
-                        </div>
-                        <div class="submit-btn-container d-flex justify-content-center">
-                            <button type="submit" class="btn btn-style-1 w-50">Save</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- END CURRENCY MODAL -->
-
     <!--FOOTER-->
     <footer>
-        <div id="desktop_footer">
+        <div id="desktop_footer" class="d-none d-md-block">
             <div class="tax-info">
                 <p class="tax-text mb-0">Products and Prices are not subjected to 14% tax</p>
                 <div class="line"></div>
@@ -792,7 +688,7 @@
                         <div class="last-desktop-footer-section h-100">
                             <h5 class="desktop-footer-title text-center">Subscribe</h5>
                             <p class="text-center subscription-text">Get the latest news related to our events and discounts</p>
-                            <div class="subscription-btn d-flex justify-content-center align-items-center">
+                            <div class="subscription-btn d-flex justify-content-center align-items-center" data-toggle="modal" data-target="#subscriptionModal">
                                 <button type="button" class="btn btn-style-2">Subscribe Now</button>
                             </div>
                             <div class="desktop-footer-contact-info-section">
@@ -820,9 +716,254 @@
                 </div>
             </div>
         </div>
-        <div id="mobile_footer"></div>
+        <div id="mobile_footer" class="d-block d-md-none">
+            <div class="mobile-footer-info-container">
+                <form action="#" id="mobile_subscription_form">
+                    <h6 class="form-title">SIGN UP FOR EMAILS</h6>
+                    <div class="form-field-container">
+                        <div class="form-group">
+                            <input class="form-control" type="email" name="email" placeholder="ENTER EMAIL ADDRESS" required>
+                        </div>
+                        <button type="submit" class="btn btn-style-1">SUBMIT</button>
+                    </div>
+                </form>
+                <div class="privacy-info">
+                    <a href="privacy-policy.html" class="info-link">Click here</a>
+                    <span>to read our privacy notice. Or</span>
+                    <a href="contact-us.html" class="info-link">Contact Us</a>
+                </div>
+                <div id="mobile_footer_accordion">
+                    <!-- mobile footer card btn -->
+                    <div class="card">
+                        <div class="card-header" id="mobileFooterBtnOne">
+                            <button class="btn mobile-footer-btn collapsed" data-toggle="collapse" data-target="#mobileFooterCollapseOne" aria-expanded="true" aria-controls="mobileFooterCollapseOne">
+                                <span>Products</span>
+                                <i class="convert-svg" data-src="images/icons/plus.svg"></i>
+                            </button>
+                        </div>
+                        <div id="mobileFooterCollapseOne" class="collapse" aria-labelledby="mobileFooterBtnOne" data-parent="#mobile_footer_accordion">
+                            <div class="card-body">
+                                <ul class="mobile-footer-links-container">
+                                    <li class="mobile-footer-link-container">
+                                        <a href="filter.html" class="mobile-footer-link">Dining</a>
+                                        <a href="filter.html" class="mobile-footer-link">Office</a>
+                                        <a href="filter.html" class="mobile-footer-link">Bath</a>
+                                        <a href="filter.html" class="mobile-footer-link">Vanity</a>
+                                        <a href="filter.html" class="mobile-footer-link">Gifts</a>
+                                        <a href="filter.html" class="mobile-footer-link">Rare Valuables</a>
+                                        <a href="filter.html" class="mobile-footer-link">Kitchen</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end mobile footer card btn -->
+                    <!-- mobile footer card btn -->
+                    <div class="card">
+                        <div class="card-header" id="mobileFooterBtnTwo">
+                            <button class="btn mobile-footer-btn collapsed" data-toggle="collapse" data-target="#mobileFooterCollapseTwo" aria-expanded="true" aria-controls="mobileFooterCollapseTwo">
+                                <span>Living</span>
+                                <i class="convert-svg" data-src="images/icons/plus.svg"></i>
+                            </button>
+                        </div>
+                        <div id="mobileFooterCollapseTwo" class="collapse" aria-labelledby="mobileFooterBtnTwo" data-parent="#mobile_footer_accordion">
+                            <div class="card-body">
+                                <ul class="mobile-footer-links-container">
+                                    <li class="mobile-footer-link-container">
+                                        <a href="filter.html" class="mobile-footer-link">Mother Nature Collection</a>
+                                        <a href="filter.html" class="mobile-footer-link">Bathroom Collection</a>
+                                        <a href="filter.html" class="mobile-footer-link">Interior</a>
+                                        <a href="filter.html" class="mobile-footer-link">Engravers</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end mobile footer card btn -->
+                    <!-- mobile footer card btn -->
+                    <div class="card">
+                        <div class="card-header" id="mobileFooterBtnThree">
+                            <button class="btn mobile-footer-btn collapsed" data-toggle="collapse" data-target="#mobileFooterCollapseThree" aria-expanded="true" aria-controls="mobileFooterCollapseThree">
+                                <span>Sitemap</span>
+                                <i class="convert-svg" data-src="images/icons/plus.svg"></i>
+                            </button>
+                        </div>
+                        <div id="mobileFooterCollapseThree" class="collapse" aria-labelledby="mobileFooterBtnThree" data-parent="#mobile_footer_accordion">
+                            <div class="card-body">
+                                <ul class="mobile-footer-links-container">
+                                    <li class="mobile-footer-link-container">
+                                        <a href="index.html" class="mobile-footer-link">Home</a>
+                                        <a href="filter.html" class="mobile-footer-link">Products</a>
+                                        <a href="living.html" class="mobile-footer-link">Living</a>
+                                        <a href="about-us.html" class="mobile-footer-link">About Us</a>
+                                        <a href="faqs.html" class="mobile-footer-link">FAQs</a>
+                                        <a href="contact-us.html" class="mobile-footer-link">Contact Us</a>
+                                        <a href="wishlist.html" class="mobile-footer-link">Wishlist</a>
+                                        <a href="cart.html" class="mobile-footer-link">Cart</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end mobile footer card btn -->
+                </div>
+                <div class="mobile-footer-logo-container d-flex justify-content-center align-items-center">
+                    <a href="index.html" class="mobile-footer-logo">
+                        <img class="lazy" data-src="https://via.placeholder.com/155x50" alt="">
+                    </a>
+                </div>
+                <div class="mobile-footer-social-media-icons">
+                    <a href="https://instagram.com/joez_designs?igshid=4i3gl74qsucd" target="_blank" class="social-media-item">
+                        <i class="convert-svg" data-src="images/icons/instagram.svg"></i>
+                        <span class="social-media-text">Joez_designs</span>
+                    </a>
+                    <a href="https://www.facebook.com/Joez.Designss" target="_blank" class="social-media-item">
+                        <i class="convert-svg" data-src="images/icons/facebook-colored.svg"></i>
+                        <span class="social-media-text">Joez.designss</span>
+                    </a>
+                </div>
+            </div>
+            <div class="mobile-footer-last-section"></div>
+        </div>
     </footer>
     <!--END FOOTER-->
+
+    <!-- CURRENCY MODAL -->
+    <div class="modal fade modal-style-1" id="currencyModal" tabindex="-1" role="dialog" aria-labelledby="currencyModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="btn close-modal-btn" data-dismiss="modal">
+                        <i class="convert-svg" data-src="images/icons/x.svg"></i>
+                    </button>
+                    <p class="modal-text">Current Currency</p>
+                    <div class="currenct-currency-container">
+                        <p class="current-currency mb-0">Egyptian Pound</p>
+                    </div>
+                    <form action="#" id="currency_form">
+                        <p class="modal-text text-center">Choose Currency</p>
+                        <div class="input-container">
+                            <select class="form-control" id="exampleFormControlSelect1">
+                                <option value="egp">Egyptian Pound</option>
+                                <option value="usd">US Dollars</option>
+                                <option value="cad">Canadian Dollars</option>
+                            </select>
+                            <i class="convert-svg" data-src="images/icons/caret-down.svg"></i>
+                        </div>
+                        <div class="submit-btn-container d-flex justify-content-center">
+                            <button type="submit" class="btn btn-style-1 w-50">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END CURRENCY MODAL -->
+
+    <!-- SUBSCRIPTION MODAL -->
+    <div class="modal fade modal-style-2" id="subscriptionModal" tabindex="-1" role="dialog" aria-labelledby="subscriptionModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="btn close-modal-btn" data-dismiss="modal">
+                        <i class="convert-svg" data-src="images/icons/x.svg"></i>
+                    </button>
+                    <div class="modal-img-container">
+                        <div class="img-container">
+                            <img class="lazy" data-src="images/subscription-img.png" alt="">
+                        </div>
+                    </div>
+                    <div class="modal-info-container">
+                        <h6 class="modal-title">Subscribe!</h6>
+                        <p class="modal-text">Sit obcaecati similique eos debitis fugiat est eligendi molestiae sit similique quia. Sed quae galisum ex dolore nostrum ut obcaecati quaerat sit nihil dolor. Nam velit magni ab voluptas. Lorem ipsum dolor sit amet. Ab excepturi
+                            deleniti
+                        </p>
+                        <form action="" id="desktop_subscription_form">
+                            <div class="form-group">
+                                <input class="form-control" type="email" name="email" placeholder="Enter Email Address" required>
+                            </div>
+                            <div class="submit-btn-container d-flex justify-content-center align-items-center">
+                                <button type="submit" class="btn btn-style-2">Subscribe</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END SUBSCRIPTION MODAL -->
+
+    <!-- SEARCH POPUP -->
+    <div id="search_popup">
+        <button type="button" class="btn close-search-btn">
+            <i class="convert-svg" data-src="images/icons/x.svg"></i>
+        </button>
+        <form action="#" id="search_form">
+            <div class="input-container">
+                <input class="form-control" type="text" placeholder="Search..">
+                <i class="convert-svg" data-src="images/icons/magnifying-glass.svg"></i>
+            </div>
+        </form>
+        <p class="search-results-text no-results-text d-none">No Resuls Found</p>
+        <p class="search-results-text">Results for <span id="search_keyword">“Bathroom”</span></p>
+        <div class="search-results">
+            <!-- group -->
+            <div class="search-result-group">
+                <h6 class="group-title">Products</h6>
+                <!-- item -->
+                <div class="group-item">
+                    <a href="product-details.html" class="img-container">
+                        <img class="lazy" data-src="https://via.placeholder.com/97x97" alt="">
+                    </a>
+                    <div class="item-text-container">
+                        <a href="filter.html" class="item-category">Soap Plates</a>
+                        <a href="product-details.html" class="item-title mb-0">Lorem Ipsum</a>
+                    </div>
+                </div>
+                <!-- end item -->
+                <!-- item -->
+                <div class="group-item">
+                    <a href="product-details.html" class="img-container">
+                        <img class="lazy" data-src="https://via.placeholder.com/97x97" alt="">
+                    </a>
+                    <div class="item-text-container">
+                        <a href="filter.html" class="item-category">Bathroom Sets</a>
+                        <a href="product-details.html" class="item-title mb-0">Lorem Ipsum</a>
+                    </div>
+                </div>
+                <!-- end item -->
+            </div>
+            <!-- end group -->
+            <!-- group -->
+            <div class="search-result-group">
+                <h6 class="group-title">Living</h6>
+                <!-- item -->
+                <div class="group-item">
+                    <a href="product-details.html" class="img-container">
+                        <img class="lazy" data-src="https://via.placeholder.com/97x97" alt="">
+                    </a>
+                    <div class="item-text-container">
+                        <a href="filter.html" class="item-category">Sinks</a>
+                        <a href="product-details.html" class="item-title mb-0">Lorem Ipsum</a>
+                    </div>
+                </div>
+                <!-- end item -->
+                <!-- item -->
+                <div class="group-item">
+                    <a href="product-details.html" class="img-container">
+                        <img class="lazy" data-src="https://via.placeholder.com/97x97" alt="">
+                    </a>
+                    <div class="item-text-container">
+                        <a href="filter.html" class="item-category">Engravers</a>
+                        <a href="product-details.html" class="item-title mb-0">Lorem Ipsum</a>
+                    </div>
+                </div>
+                <!-- end item -->
+            </div>
+            <!-- end group -->
+        </div>
+    </div>
+    <!-- END SEARCH POPUP -->
 
     <!-- BASE JS-->
     <script src="js/jquery-3.4.1.min.js"></script>

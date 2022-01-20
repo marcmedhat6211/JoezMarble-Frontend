@@ -4,6 +4,8 @@ var searchPopup = $("#search_popup");
 var mobileMenuWrapper = $("#mobile_menu_wrapper");
 var mobileMenu = $("#mobile_menu");
 $(document).ready(function() {
+    $("#desktop_subscription_form, #mobile_subscription_form").validate();
+
     //lazy loading
     if ($("img.lazy").length > 0) {
         $("img.lazy").lazy({
@@ -62,9 +64,11 @@ $(document).ready(function() {
 
     mobileHeader.find("#mobile_cart_btn").on("click", function() {
         mobileHeader.find("#mobile_cart").addClass("show");
+        $("body").addClass("modal-open");
     });
     mobileHeader.find("#close_cart_btn").on("click", function() {
         mobileHeader.find("#mobile_cart").removeClass("show");
+        $("body").removeClass("modal-open");
     });
 
 
@@ -72,10 +76,12 @@ $(document).ready(function() {
     mobileHeader.find("#mobile_menu_btn").on("click", function() {
         mobileMenuWrapper.addClass("show");
         mobileMenu.addClass("show");
+        $("body").addClass("modal-open");
     });
     mobileMenu.find("#close_mobile_menu_btn").on("click", function() {
         mobileMenuWrapper.removeClass("show");
         mobileMenu.removeClass("show");
+        $("body").removeClass("modal-open");
     });
 
     $(document).on("click", function(e) {
