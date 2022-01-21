@@ -27,6 +27,7 @@ $(document).ready(function() {
         desktopHeader.find(".header-item.dropdown").not($this.closest(".header-item")).removeClass("active");
         $("#desktop_profile_dropdown").addClass("d-none");
         desktopHeader.find("#desktop_cart").addClass("d-none");
+        desktopHeader.find("#desktop_cart_btn").removeClass("active");
     });
 
     $("#desktop_profile_btn").on("click", function() {
@@ -34,10 +35,12 @@ $(document).ready(function() {
         desktopHeader.find(".dropdown-menu-container").removeClass("show");
         desktopHeader.find(".header-item.dropdown").removeClass("active");
         desktopHeader.find("#desktop_cart").addClass("d-none");
+        desktopHeader.find("#desktop_cart_btn").removeClass("active");
     });
 
     $("#desktop_cart_btn").on("click", function() {
         desktopHeader.find("#desktop_cart").toggleClass("d-none");
+        $(this).toggleClass("active");
         desktopHeader.find(".dropdown-menu-container").removeClass("show");
         desktopHeader.find(".header-item.dropdown").removeClass("active");
         desktopHeader.find("#desktop_profile_dropdown").addClass("d-none");
@@ -45,6 +48,7 @@ $(document).ready(function() {
 
     desktopHeader.find("#close_cart_btn").on("click", function() {
         desktopHeader.find("#desktop_cart").addClass("d-none");
+        desktopHeader.find("#desktop_cart_btn").removeClass("active");
     });
 
     //search popup

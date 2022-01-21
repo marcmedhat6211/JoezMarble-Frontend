@@ -19,3 +19,29 @@ a {
 a:hover {
     text-decoration: none;
 }
+
+.has-active-icon {
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    &.fav-icon {
+        background-image: url(../images/icons/fav-icon.svg);
+        background-size: 48px 25px;
+        background-position: left;
+        background-repeat: no-repeat;
+        &.active {
+            background-position: right;
+        }
+    }
+    &.cart-icon {
+        background-image: url(../images/icons/cart-icon.svg);
+        background-size: 48px 25px;
+        background-position: left;
+        &.active {
+            background-position: right;
+        }
+    }
+}
