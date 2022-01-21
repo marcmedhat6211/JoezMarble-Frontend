@@ -61,6 +61,20 @@ footer {
                 .subscription-btn {
                     margin-bottom: 22px;
                 }
+                .privacy-policy-text {
+                    margin-bottom: 16px;
+                    .link {
+                        color: $color-white;
+                        font-size: 14px;
+                        font-weight: 300;
+                        text-decoration: underline;
+                    }
+                    span {
+                        color: $color-white;
+                        font-size: 14px;
+                        font-weight: 700;
+                    }
+                }
                 .desktop-footer-contact-info-section {
                     margin-bottom: 18px;
                     .contact-info {
@@ -153,6 +167,7 @@ footer {
                     color: $color-grey-5;
                     font-size: 14px;
                     font-weight: 600;
+                    text-decoration: underline;
                 }
                 span {
                     font-size: 14px;

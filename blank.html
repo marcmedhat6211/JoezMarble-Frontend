@@ -349,7 +349,7 @@
                             </div>
                             <div class="link-text-container">
                                 <span class="link-text">Joe Roman</span>
-                                <a class="edit-profile-link" href="edit-profile.html">Edit your profile</a>
+                                <a class="edit-profile-link" href="#" data-toggle="modal" data-target="#editProfileModal">Edit your profile</a>
                             </div>
                         </li>
                         <!-- end link -->
@@ -548,15 +548,31 @@
                         <a href="index.html" class="link">Home</a>
                     </li>
                     <li class="mobile-menu-link">
-                        <a href="profile.html" class="link">Profile</a>
-                    </li>
-                    <li class="mobile-menu-link">
                         <a href="wishlist.html" class="link">Wishlist</a>
                     </li>
                     <li class="mobile-menu-link">
                         <a href="about-us.html" class="link">About Us</a>
                     </li>
                     <div id="mobile_menu_accordion">
+                        <div class="card">
+                            <div class="card-header mobile-menu-link" id="headingThree">
+                                <button class="btn link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <span>Profile</span>
+                                <i class="convert-svg" data-src="images/icons/plus.svg"></i>
+                            </button>
+                            </div>
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#mobile_menu_accordion">
+                                <div class="card-body">
+                                    <ul class="mobile-menu-dropdown-links">
+                                        <li class="mobile-menu-dropdown-group">
+                                            <a href="#" data-toggle="modal" data-target="#editProfileModal" class="link-text">Edit Profile</a>
+                                            <a href="orders.html" class="link-text">My orders</a>
+                                            <a href="#" class="link-text">Log out</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                         <div class="card">
                             <div class="card-header mobile-menu-link" id="headingOne">
                                 <button class="btn link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -691,6 +707,10 @@
                             <div class="subscription-btn d-flex justify-content-center align-items-center" data-toggle="modal" data-target="#subscriptionModal">
                                 <button type="button" class="btn btn-style-2">Subscribe Now</button>
                             </div>
+                            <div class="privacy-policy-text">
+                                <a href="#" class="link" data-toggle="modal" data-target="#privacyPolicyModal">Click here</a>
+                                <span>to read our privacy notice.</span>
+                            </div>
                             <div class="desktop-footer-contact-info-section">
                                 <div class="contact-info">
                                     <i class="convert-svg" data-src="images/icons/phone.svg"></i>
@@ -703,7 +723,7 @@
                             </div>
                             <div class="desktop-footer-social-media-section">
                                 <a href="https://instagram.com/joez_designs?igshid=4i3gl74qsucd" target="_blank" class="social-media-item">
-                                    <i class="convert-svg" data-src="images/icons/instagram-colored.svg"></i>
+                                    <i class="convert-svg" data-src="images/icons/instagram.svg"></i>
                                     <span class="item-text">Joez_designs</span>
                                 </a>
                                 <a href="https://www.facebook.com/Joez.Designss" target="_blank" class="social-media-item">
@@ -728,7 +748,7 @@
                     </div>
                 </form>
                 <div class="privacy-info">
-                    <a href="privacy-policy.html" class="info-link">Click here</a>
+                    <a href="#" class="info-link" data-toggle="modal" data-target="#privacyPolicyModal">Click here</a>
                     <span>to read our privacy notice. Or</span>
                     <a href="contact-us.html" class="info-link">Contact Us</a>
                 </div>
@@ -887,6 +907,122 @@
                             </div>
                         </form>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END SUBSCRIPTION MODAL -->
+
+    <!-- PRIVACY POLICY MODAL -->
+    <div class="modal fade modal-style-3" id="privacyPolicyModal" tabindex="-1" role="dialog" aria-labelledby="privacyPolicyModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="btn close-modal-btn" data-dismiss="modal">
+                        <i class="convert-svg" data-src="images/icons/x.svg"></i>
+                    </button>
+                    <div class="modal-links-container">
+                        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="pills-privacy-policy-tab" data-toggle="pill" href="#pills-privacy-policy" role="tab" aria-controls="pills-privacy-policy" aria-selected="true">1. Privacy Policy</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="pills-user-rights-tab" data-toggle="pill" href="#pills-user-rights" role="tab" aria-controls="pills-user-rights" aria-selected="false">2. User Rights</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="pills-orders-tab" data-toggle="pill" href="#pills-orders" role="tab" aria-controls="pills-orders" aria-selected="false">3. Orders</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="pills-payment-methods-tab" data-toggle="pill" href="#pills-payment-methods" role="tab" aria-controls="pills-payment-methods" aria-selected="false">4. Payment Methods</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="pills-return-and-cancellation-tab" data-toggle="pill" href="#pills-return-and-cancellation" role="tab" aria-controls="pills-return-and-cancellation" aria-selected="false">5. Return & Cancellation</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="pills-subscriptions-tab" data-toggle="pill" href="#pills-subscriptions" role="tab" aria-controls="pills-subscriptions" aria-selected="false">6. Subscriptions</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="modal-description-container">
+                        <div class="tab-content" id="pills-tabContent">
+                            <div class="tab-pane fade show active" id="pills-privacy-policy" role="tabpanel" aria-labelledby="pills-privacy-policy-tab">
+                                <h6 class="tab-title">Privacy Policy</h6>
+                                <p class="mb-0 tab-description">
+                                    Sit obcaecati similique eos debitis fugiat est eligendi molestiae sit similique quia. Sed quae galisum ex dolore nostrum ut obcaecati quaerat sit nihil dolor. Nam velit magni ab voluptas. Lorem ipsum dolor sit amet. Ab excepturi deleniti
+                                    <br><br>Sit obcaecati similique eos debitis fugiat est eligendi molestiae sit similique quia. Sed quae galisum ex dolore nostrum ut obcaecati quaerat sit nihil dolor. Nam velit magni ab voluptas. Lorem ipsum dolor sit
+                                    amet. Ab excepturi deleniti<br><br>Sit obcaecati similique eos debitis fugiat est eligendi molestiae sit similique quia. Sed quae galisum ex dolore nostrum ut obcaecati quaerat sit nihil dolor. Nam velit magni ab voluptas.
+                                    Lorem ipsum dolor sit amet. Ab excepturi deleniti Sit obcaecati similique eos debitis fugiat est eligendi molestiae sit similique quia. Sed quae galisum ex dolore nostrum ut obcaecati quaerat sit nihil dolor. Nam velit
+                                    magni ab voluptas. Lorem ipsum dolor sit amet. Ab excepturi deleniti
+                                    <br><br>Sit obcaecati similique eos debitis fugiat est eligendi molestiae sit similique quia. Sed quae galisum ex dolore nostrum ut obcaecati quaerat sit nihil dolor. Nam velit magni ab voluptas. Lorem ipsum dolor sit
+                                    amet. Ab excepturi deleniti<br><br>Sit obcaecati similique eos debitis fugiat est eligendi molestiae sit similique quia. Sed quae galisum ex dolore nostrum ut obcaecati quaerat sit nihil dolor. Nam velit magni ab voluptas.
+                                    Lorem ipsum dolor sit amet. Ab excepturi deleniti Sit obcaecati similique eos debitis fugiat est eligendi molestiae sit similique quia. Sed quae galisum ex dolore nostrum ut obcaecati quaerat sit nihil dolor. Nam velit
+                                    magni ab voluptas. Lorem ipsum dolor sit amet. Ab excepturi deleniti
+                                    <br><br>Sit obcaecati similique eos debitis fugiat est eligendi molestiae sit similique quia. Sed quae galisum ex dolore nostrum ut obcaecati quaerat sit nihil dolor. Nam velit magni ab voluptas. Lorem ipsum dolor sit
+                                    amet. Ab excepturi deleniti<br><br>Sit obcaecati similique eos debitis fugiat est eligendi molestiae sit similique quia. Sed quae galisum ex dolore nostrum ut obcaecati quaerat sit nihil dolor. Nam velit magni ab voluptas.
+                                    Lorem ipsum dolor sit amet. Ab excepturi deleniti
+                                </p>
+                            </div>
+                            <div class="tab-pane fade" id="pills-user-rights" role="tabpanel" aria-labelledby="pills-user-rights-tab">
+                                <h6 class="tab-title">User Rights</h6>
+                                <p class="mb-0 tab-description">
+                                    Sit obcaecati similique eos debitis fugiat est eligendi molestiae sit similique quia. Sed quae galisum ex dolore nostrum ut obcaecati quaerat sit nihil dolor. Nam velit magni ab voluptas. Lorem ipsum dolor sit amet. Ab excepturi deleniti
+                                    <br><br>Sit obcaecati similique eos debitis fugiat est eligendi molestiae sit similique quia. Sed quae galisum ex dolore nostrum ut obcaecati quaerat sit nihil dolor. Nam velit magni ab voluptas. Lorem ipsum dolor sit
+                                    amet. Ab excepturi deleniti<br><br>Sit obcaecati similique eos debitis fugiat est eligendi molestiae sit similique quia. Sed quae galisum ex dolore nostrum ut obcaecati quaerat sit nihil dolor. Nam velit magni ab voluptas.
+                                    Lorem ipsum dolor sit amet. Ab excepturi deleniti
+                                </p>
+                            </div>
+                            <div class="tab-pane fade" id="pills-orders" role="tabpanel" aria-labelledby="pills-orders-tab">
+                                <h6 class="tab-title">Orders</h6>
+                                <p class="mb-0 tab-description">
+                                    Sit obcaecati similique eos debitis fugiat est eligendi molestiae sit similique quia. Sed quae galisum ex dolore nostrum ut obcaecati quaerat sit nihil dolor. Nam velit magni ab voluptas. Lorem ipsum dolor sit amet. Ab excepturi deleniti
+                                    <br><br>Sit obcaecati similique eos debitis fugiat est eligendi molestiae sit similique quia. Sed quae galisum ex dolore nostrum ut obcaecati quaerat sit nihil dolor. Nam velit magni ab voluptas. Lorem ipsum dolor sit
+                                    amet. Ab excepturi deleniti<br><br>Sit obcaecati similique eos debitis fugiat est eligendi molestiae sit similique quia. Sed quae galisum ex dolore nostrum ut obcaecati quaerat sit nihil dolor. Nam velit magni ab voluptas.
+                                    Lorem ipsum dolor sit amet. Ab excepturi deleniti
+                                </p>
+                            </div>
+                            <div class="tab-pane fade" id="pills-payment-methods" role="tabpanel" aria-labelledby="pills-payment-methods-tab">
+                                <h6 class="tab-title">Payment Methods</h6>
+                                <p class="mb-0 tab-description">
+                                    Sit obcaecati similique eos debitis fugiat est eligendi molestiae sit similique quia. Sed quae galisum ex dolore nostrum ut obcaecati quaerat sit nihil dolor. Nam velit magni ab voluptas. Lorem ipsum dolor sit amet. Ab excepturi deleniti
+                                    <br><br>Sit obcaecati similique eos debitis fugiat est eligendi molestiae sit similique quia. Sed quae galisum ex dolore nostrum ut obcaecati quaerat sit nihil dolor. Nam velit magni ab voluptas. Lorem ipsum dolor sit
+                                    amet. Ab excepturi deleniti<br><br>Sit obcaecati similique eos debitis fugiat est eligendi molestiae sit similique quia. Sed quae galisum ex dolore nostrum ut obcaecati quaerat sit nihil dolor. Nam velit magni ab voluptas.
+                                    Lorem ipsum dolor sit amet. Ab excepturi deleniti
+                                </p>
+                            </div>
+                            <div class="tab-pane fade" id="pills-return-and-cancellation" role="tabpanel" aria-labelledby="pills-return-and-cancellation-tab">
+                                <h6 class="tab-title">Return & Cancellation</h6>
+                                <p class="mb-0 tab-description">
+                                    Sit obcaecati similique eos debitis fugiat est eligendi molestiae sit similique quia. Sed quae galisum ex dolore nostrum ut obcaecati quaerat sit nihil dolor. Nam velit magni ab voluptas. Lorem ipsum dolor sit amet. Ab excepturi deleniti
+                                    <br><br>Sit obcaecati similique eos debitis fugiat est eligendi molestiae sit similique quia. Sed quae galisum ex dolore nostrum ut obcaecati quaerat sit nihil dolor. Nam velit magni ab voluptas. Lorem ipsum dolor sit
+                                    amet. Ab excepturi deleniti<br><br>Sit obcaecati similique eos debitis fugiat est eligendi molestiae sit similique quia. Sed quae galisum ex dolore nostrum ut obcaecati quaerat sit nihil dolor. Nam velit magni ab voluptas.
+                                    Lorem ipsum dolor sit amet. Ab excepturi deleniti
+                                </p>
+                            </div>
+                            <div class="tab-pane fade" id="pills-subscriptions" role="tabpanel" aria-labelledby="pills-subscriptions-tab">
+                                <h6 class="tab-title">Subscriptions</h6>
+                                <p class="mb-0 tab-description">
+                                    Sit obcaecati similique eos debitis fugiat est eligendi molestiae sit similique quia. Sed quae galisum ex dolore nostrum ut obcaecati quaerat sit nihil dolor. Nam velit magni ab voluptas. Lorem ipsum dolor sit amet. Ab excepturi deleniti
+                                    <br><br>Sit obcaecati similique eos debitis fugiat est eligendi molestiae sit similique quia. Sed quae galisum ex dolore nostrum ut obcaecati quaerat sit nihil dolor. Nam velit magni ab voluptas. Lorem ipsum dolor sit
+                                    amet. Ab excepturi deleniti<br><br>Sit obcaecati similique eos debitis fugiat est eligendi molestiae sit similique quia. Sed quae galisum ex dolore nostrum ut obcaecati quaerat sit nihil dolor. Nam velit magni ab voluptas.
+                                    Lorem ipsum dolor sit amet. Ab excepturi deleniti
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END SUBSCRIPTION MODAL -->
+
+    <!-- EDIT PROFILE MODAL -->
+    <div class="modal fade modal-style-4" id="editProfileModal" tabindex="-1" role="dialog" aria-labelledby="editProfileModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="btn close-modal-btn" data-dismiss="modal">
+                        <i class="convert-svg" data-src="images/icons/x.svg"></i>
+                    </button>
                 </div>
             </div>
         </div>
