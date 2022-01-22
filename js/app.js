@@ -3,6 +3,7 @@ var mobileHeader = $("#mobile_header");
 var searchPopup = $("#search_popup");
 var mobileMenuWrapper = $("#mobile_menu_wrapper");
 var mobileMenu = $("#mobile_menu");
+var productCard = $(".card.card-style-1");
 $(document).ready(function() {
     $("#desktop_subscription_form, #mobile_subscription_form").validate();
 
@@ -122,6 +123,23 @@ $(document).ready(function() {
             $(this).prop("disabled", true);
         }
     });
+
+    // fav icon on product card
+    if (productCard.length > 0) {
+        if (productCard.length > 1) {
+            productCard.each(function() {
+                $(this).find(".card-fav-icon").on("click", function(e) {
+                    e.preventDefault();
+                    $(this).toggleClass("active");
+                });
+            });
+        } else {
+            productCard.find(".card-fav-icon").on("click", function(e) {
+                e.preventDefault();
+                $(this).toggleClass("active");
+            });
+        }
+    }
 });
 
 

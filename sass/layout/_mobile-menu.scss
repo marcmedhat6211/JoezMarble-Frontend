@@ -139,13 +139,14 @@
                 }
             }
             .mobile-currency-form {
+                margin-bottom: 40px;
                 .form-title {
                     color: $color-black;
                     font-weight: 600;
                     font-size: 16px;
                     margin-bottom: 16px;
                 }
-                .currency-input-container {
+                .form-group {
                     position: relative;
                     width: 100%;
                     select {

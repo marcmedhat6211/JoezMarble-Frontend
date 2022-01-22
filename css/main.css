@@ -10968,6 +10968,16 @@ a:hover {
 .has-active-icon.fav-icon.active {
   background-position: right;
 }
+.has-active-icon.card-fav-icon {
+  background-image: url(../images/icons/card-fav-icon.svg);
+  background-size: 48px 25px;
+  background-position: left;
+  background-repeat: no-repeat;
+  z-index: 9;
+}
+.has-active-icon.card-fav-icon.active {
+  background-position: right;
+}
 .has-active-icon.cart-icon {
   background-image: url(../images/icons/cart-icon.svg);
   background-size: 48px 25px;
@@ -11895,17 +11905,20 @@ header #mobile_header .mobile-cart .cart-total-container .amount {
   font-weight: 400;
   color: #665D90;
 }
+#mobile_menu_wrapper #mobile_menu .mobile-menu-body .mobile-currency-form {
+  margin-bottom: 40px;
+}
 #mobile_menu_wrapper #mobile_menu .mobile-menu-body .mobile-currency-form .form-title {
   color: #000000;
   font-weight: 600;
   font-size: 16px;
   margin-bottom: 16px;
 }
-#mobile_menu_wrapper #mobile_menu .mobile-menu-body .mobile-currency-form .currency-input-container {
+#mobile_menu_wrapper #mobile_menu .mobile-menu-body .mobile-currency-form .form-group {
   position: relative;
   width: 100%;
 }
-#mobile_menu_wrapper #mobile_menu .mobile-menu-body .mobile-currency-form .currency-input-container select {
+#mobile_menu_wrapper #mobile_menu .mobile-menu-body .mobile-currency-form .form-group select {
   width: 100%;
   color: #787878;
   border: none;
@@ -11913,10 +11926,10 @@ header #mobile_header .mobile-cart .cart-total-container .amount {
   padding-left: 0;
   padding-right: 0;
 }
-#mobile_menu_wrapper #mobile_menu .mobile-menu-body .mobile-currency-form .currency-input-container select:focus {
+#mobile_menu_wrapper #mobile_menu .mobile-menu-body .mobile-currency-form .form-group select:focus {
   box-shadow: none;
 }
-#mobile_menu_wrapper #mobile_menu .mobile-menu-body .mobile-currency-form .currency-input-container svg {
+#mobile_menu_wrapper #mobile_menu .mobile-menu-body .mobile-currency-form .form-group svg {
   width: 14px;
   height: 14px;
   color: #787878;
@@ -12016,6 +12029,12 @@ header #mobile_header .mobile-cart .cart-total-container .amount {
   right: 24px;
 }
 
+@media (max-width: 991.98px) {
+  .card.card-style-1 {
+    height: 200px;
+    border-radius: 20px;
+  }
+}
 .card.card-style-2 {
   height: 500px;
   border: none;

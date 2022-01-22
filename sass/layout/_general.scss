@@ -36,6 +36,16 @@ a:hover {
             background-position: right;
         }
     }
+    &.card-fav-icon {
+        background-image: url(../images/icons/card-fav-icon.svg);
+        background-size: 48px 25px;
+        background-position: left;
+        background-repeat: no-repeat;
+        z-index: 9;
+        &.active {
+            background-position: right;
+        }
+    }
     &.cart-icon {
         background-image: url(../images/icons/cart-icon.svg);
         background-size: 48px 25px;

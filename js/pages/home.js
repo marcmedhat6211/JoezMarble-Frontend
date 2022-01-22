@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    // BANNER SLIDER
+    // banner swiper
     var bannerSwiper = new Swiper('.swiper-container.banner-swiper', {
         loop: true,
         slidesPerView: 1,
@@ -22,10 +22,10 @@ $(document).ready(function() {
         },
     });
 
-
+    // featured products swiper
     var featuredProductsSwiper = new Swiper('.swiper-container.featured-products-swiper', {
         loop: false,
-        slidesPerView: 1.12,
+        slidesPerView: 1.4,
         spaceBetween: 15,
         slidesPerColumn: 2,
         slidesPerColumnFill: "row",
@@ -45,6 +45,7 @@ $(document).ready(function() {
                 spaceBetween: 20,
                 slidesPerColumn: 2,
                 slidesPerColumnFill: "row",
+                watchSlidesVisibility: true,
             },
             991.98: {
                 slidesPerView: 3,
@@ -68,7 +69,7 @@ $(document).ready(function() {
         }
     });
 
-
+    // about section swiper
     var homeAboutSwiper = new Swiper('.swiper-container.home-about-swiper', {
         loop: false,
         slidesPerView: 2.4,
@@ -88,6 +89,7 @@ $(document).ready(function() {
         }
     });
 
+    // reviews swiper
     var reviewsSwiper = new Swiper('.swiper-container.reviews-swiper', {
         loop: false,
         slidesPerView: 1,

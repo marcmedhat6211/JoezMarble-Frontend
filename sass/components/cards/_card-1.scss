@@ -21,3 +21,10 @@
         }
     }
 }
+
+@include media-breakpoint-md {
+    .card.card-style-1 {
+        height: 200px;
+        border-radius: 20px;
+    }
+}
