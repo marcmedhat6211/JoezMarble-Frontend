@@ -4,6 +4,7 @@ var searchPopup = $("#search_popup");
 var mobileMenuWrapper = $("#mobile_menu_wrapper");
 var mobileMenu = $("#mobile_menu");
 var productCard = $(".card.card-style-1");
+var currencyPopup = $("#currencyModal");
 $(document).ready(function() {
     $("#desktop_subscription_form, #mobile_subscription_form").validate();
 
@@ -140,6 +141,12 @@ $(document).ready(function() {
             });
         }
     }
+
+    // currency popup
+    currencyPopup.find("#currency_form select").on("change", function() {
+        var selectedText = $(this).find("option:selected").text();
+        $(this).closest(".input-container").closest("#currency_form").closest(".modal-body").find(".current-currency").text(selectedText);
+    });
 });
 
 

@@ -12169,7 +12169,7 @@ header #mobile_header .mobile-cart .cart-total-container .amount {
   color: #806543;
   margin-bottom: 30px;
 }
-.modal.modal-style-1 .modal-dialog .modal-content .modal-body .currenct-currency-container {
+.modal.modal-style-1 .modal-dialog .modal-content .modal-body .current-currency-container {
   width: 300px;
   height: 60px;
   border: 4px solid #665D90;
@@ -12178,7 +12178,7 @@ header #mobile_header .mobile-cart .cart-total-container .amount {
   justify-content: center;
   align-items: center;
 }
-.modal.modal-style-1 .modal-dialog .modal-content .modal-body .currenct-currency-container .current-currency {
+.modal.modal-style-1 .modal-dialog .modal-content .modal-body .current-currency-container .current-currency {
   font-size: 18px;
   font-weight: 500;
   color: #000000;
@@ -12666,6 +12666,7 @@ header #mobile_header .mobile-cart .cart-total-container .amount {
 }
 #home_page_container .banner-section .banner-swiper .swiper-wrapper .swiper-slide .banner-container .banner-img {
   height: 100%;
+  width: 100%;
   object-fit: cover;
 }
 #home_page_container .banner-section .banner-swiper .swiper-wrapper .swiper-slide .banner-container .banner-text-container {
